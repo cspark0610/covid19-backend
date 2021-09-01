@@ -1,0 +1,34 @@
+### signup route test
+POST http://localhost:5000/auth/signup
+Content-Type: application/json
+
+{
+    "firstName": "carlos",
+    "lastName": "park",
+    "email": "cpark@gmail.com",
+    "password": "1111",
+    "confirmPassword": "1111",
+    "id": 3
+
+}
+### Get a particular user with given ID Param in url
+POST http://localhost:5000/auth/login
+Content-Type: application/json
+
+{
+    "email": "cpark@gmail.com",
+    "password": "1111"  
+}
+
+### Sign out test request
+GET http://localhost:5000/posts/statistics
+
+
+###Get a post Query in which country is 
+GET http://localhost:5000/posts/statistics/search?country=Argentina
+
+
+#GET sync, overwrites DB by sync with latest data 
+GET http://localhost:5000/posts/sync 
+
+
