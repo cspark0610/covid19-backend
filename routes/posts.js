@@ -1,5 +1,5 @@
 import express from 'express';
-import { getSync, getAll, getBySearchQuery } from '../controllers/posts.js';
+import { getSync, getAll, getBySearchQuery, getByContinentQuery } from '../controllers/posts.js';
 import { auth } from '../middleware/auth.js';
 
 const router = express.Router();
@@ -8,6 +8,7 @@ const router = express.Router();
 
 router.get('/sync', auth, getSync);
 router.get('/statistics/search', auth, getBySearchQuery);
+router.get('/statistics/continent', auth, getByContinentQuery);
 router.get('/statistics', auth, getAll);
 
 export default router;

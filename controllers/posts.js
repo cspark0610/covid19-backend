@@ -34,3 +34,18 @@ export const getBySearchQuery = async (req, res) => {
 		res.status(404).json({ message: error.message });
 	}
 };
+
+export const getByContinentQuery = async (req, res) => {
+	const { continent } = req.query;
+	//console.log(continent);
+
+	try {
+		const queryRegex = new RegExp(continent, 'i');
+		const posts = await CovidPosts.find({
+			continent: { $regex: queryRegex },
+		});
+		res.status(200).json({ data: posts });
+	} catch (error) {
+		res.status(404).json({ message: error.message });
+	}
+};

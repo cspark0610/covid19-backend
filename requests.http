@@ -24,11 +24,14 @@ Content-Type: application/json
 GET http://localhost:5000/posts/statistics
 
 
-###Get a post Query in which country is 
+###Get a searchQuery by country  
 GET http://localhost:5000/posts/statistics/search?country=Argentina
 
 
-#GET sync, overwrites DB by sync with latest data 
+###Get posts by Contient
+GET http://localhost:5000/posts/statistics/continent?continent=Africa
+
+###GET sync, overwrites DB by sync with latest data 
 GET http://localhost:5000/posts/sync 
 
 
