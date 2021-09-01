@@ -11,7 +11,7 @@ Content-Type: application/json
     "id": 3
 
 }
-### Get a particular user with given ID Param in url
+### test login auth route
 POST http://localhost:5000/auth/login
 Content-Type: application/json
 
@@ -20,15 +20,15 @@ Content-Type: application/json
     "password": "1111"  
 }
 
-### Sign out test request
+### test request get all posts
 GET http://localhost:5000/posts/statistics
 
 
-###Get a searchQuery by country  
-GET http://localhost:5000/posts/statistics/search?country=Argentina
+###Get posts by country  
+GET http://localhost:5000/posts/statistics/search?country=China
 
 
-###Get posts by Contient
+###Get posts by Continent
 GET http://localhost:5000/posts/statistics/continent?continent=Africa
 
 ###GET sync, overwrites DB by sync with latest data 
