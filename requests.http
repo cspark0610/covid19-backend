@@ -28,7 +28,7 @@ GET http://localhost:5000/posts/statistics
 GET http://localhost:5000/posts/statistics/search?country=Argentina
 
 
-#GET sync, overwrites DB by sync with latest data 
+###GET sync, overwrites DB by sync with latest data 
 GET http://localhost:5000/posts/sync 
 
 
