@@ -3,8 +3,8 @@ import CovidPosts from '../models/covidPost.js';
 import seedWithoutDisconnect from '../seed.js';
 
 export const getSync = async (req, res) => {
+	await seedWithoutDisconnect();
 	try {
-		seedWithoutDisconnect();
 		const posts = await CovidPosts.find();
 		res.status(200).json({ message: posts });
 	} catch (error) {
