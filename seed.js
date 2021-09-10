@@ -21,7 +21,7 @@ const options = {
 	url: 'https://covid-193.p.rapidapi.com/statistics',
 	headers: {
 		'x-rapidapi-host': 'covid-193.p.rapidapi.com',
-		'x-rapidapi-key': '471f381503mshcc67ec1325d80eep1e166djsn836c2fa790cd',
+		'x-rapidapi-key': ["PUT YOUR OWN API KEY"],
 	},
 };
 let resultData;
